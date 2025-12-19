@@ -23,8 +23,8 @@ datasource(
 
   Files ending in `.gz`, `.bz2`, `.xz`, or `.zip` will be automatically
   uncompressed. Files starting with `http://`, `https://`, `ftp://`, or
-  `ftps://` will be automatically downloaded. Remote gz files can also
-  be automatically downloaded and decompressed.
+  `ftps://` will be automatically downloaded. Remote `.gz` files can
+  also be automatically downloaded and decompressed.
 
   Literal data is most useful for examples and tests. To be recognised
   as literal data, the input must be either wrapped with
@@ -102,7 +102,7 @@ datasource(readr_example("mtcars.csv"))
 #> [1] "source_file" "source"     
 datasource(readr_example("mtcars.csv.bz2"))
 #> [[1]]
-#> [1] "/tmp/RtmpwKvF0R/file1a60554043e5"
+#> [1] "/tmp/Rtmp6TvxVQ/file1b9e3d70ee4d"
 #> 
 #> $skip
 #> [1] 0
@@ -117,13 +117,13 @@ datasource(readr_example("mtcars.csv.bz2"))
 #> [1] TRUE
 #> 
 #> $env
-#> <environment: 0x55bf64bb66a8>
+#> <environment: 0x55c253660c28>
 #> 
 #> attr(,"class")
 #> [1] "source_file" "source"     
 datasource(readr_example("mtcars.csv.zip"))
 #> [[1]]
-#> [1] "/tmp/RtmpwKvF0R/file1a6026d7a1f7"
+#> [1] "/tmp/Rtmp6TvxVQ/file1b9eb51e753"
 #> 
 #> $skip
 #> [1] 0
@@ -138,7 +138,7 @@ datasource(readr_example("mtcars.csv.zip"))
 #> [1] TRUE
 #> 
 #> $env
-#> <environment: 0x55bf64a59788>
+#> <environment: 0x55c253486958>
 #> 
 #> attr(,"class")
 #> [1] "source_file" "source"     
@@ -150,7 +150,7 @@ datasource("https://github.com/tidyverse/readr/raw/main/inst/extdata/mtcars.csv"
 con <- rawConnection(charToRaw("abc\n123"))
 datasource(con)
 #> [[1]]
-#> [1] "/tmp/RtmpwKvF0R/file1a603037a1d4"
+#> [1] "/tmp/Rtmp6TvxVQ/file1b9e19854d1c"
 #> 
 #> $skip
 #> [1] 0
@@ -165,7 +165,7 @@ datasource(con)
 #> [1] TRUE
 #> 
 #> $env
-#> <environment: 0x55bf649264a0>
+#> <environment: 0x55c252fd1930>
 #> 
 #> attr(,"class")
 #> [1] "source_file" "source"     
