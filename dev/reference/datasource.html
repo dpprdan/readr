@@ -78,9 +78,7 @@ be automatically uncompressed. Files starting with <code>http://</code>,
 downloaded. Remote <code>.gz</code> files can also be automatically downloaded and
 decompressed.</p>
 <p>Literal data is most useful for examples and tests. To be recognised as
-literal data, the input must be either wrapped with <code><a href="https://rdrr.io/r/base/AsIs.html" class="external-link">I()</a></code>, be a string
-containing at least one new line, or be a vector containing at least one
-string with a new line.</p>
+literal data, wrap the input with <code><a href="https://rdrr.io/r/base/AsIs.html" class="external-link">I()</a></code>.</p>
 <p>Using a value of <code><a href="clipboard.html">clipboard()</a></code> will read from the system clipboard.</p></dd>
 
 
@@ -150,7 +148,7 @@ string with a new line.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "source_file" "source"     </span>
 <span class="r-in"><span><span class="fu">datasource</span><span class="op">(</span><span class="fu"><a href="readr_example.html">readr_example</a></span><span class="op">(</span><span class="st">"mtcars.csv.bz2"</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [[1]]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "/tmp/RtmpiUwc4C/file19fb6002b16a"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "/tmp/Rtmp09Pt0v/file19b3cb92ef5"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $skip</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0</span>
@@ -165,13 +163,13 @@ string with a new line.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] TRUE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $env</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x559ef2734ef0&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x563d1fd3ec88&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> attr(,"class")</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "source_file" "source"     </span>
 <span class="r-in"><span><span class="fu">datasource</span><span class="op">(</span><span class="fu"><a href="readr_example.html">readr_example</a></span><span class="op">(</span><span class="st">"mtcars.csv.zip"</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [[1]]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "/tmp/RtmpiUwc4C/file19fb1cd88b5c"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "/tmp/Rtmp09Pt0v/file19b36a8308d8"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $skip</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0</span>
@@ -186,7 +184,7 @@ string with a new line.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] TRUE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $env</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x559ef27a7c30&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x563d1fdb1a00&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> attr(,"class")</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "source_file" "source"     </span>
@@ -198,7 +196,7 @@ string with a new line.</p>
 <span class="r-in"><span><span class="va">con</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/rawConnection.html" class="external-link">rawConnection</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rawConversion.html" class="external-link">charToRaw</a></span><span class="op">(</span><span class="st">"abc\n123"</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">datasource</span><span class="op">(</span><span class="va">con</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [[1]]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "/tmp/RtmpiUwc4C/file19fb44b0ed38"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "/tmp/Rtmp09Pt0v/file19b34ee1ee"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $skip</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0</span>
@@ -213,7 +211,7 @@ string with a new line.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] TRUE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $env</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x559ef2845470&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> &lt;environment: 0x563d1fe4f208&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> attr(,"class")</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "source_file" "source"     </span>

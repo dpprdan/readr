@@ -27,10 +27,8 @@ datasource(
   also be automatically downloaded and decompressed.
 
   Literal data is most useful for examples and tests. To be recognised
-  as literal data, the input must be either wrapped with
-  [`I()`](https://rdrr.io/r/base/AsIs.html), be a string containing at
-  least one new line, or be a vector containing at least one string with
-  a new line.
+  as literal data, wrap the input with
+  [`I()`](https://rdrr.io/r/base/AsIs.html).
 
   Using a value of
   [`clipboard()`](https://readr.tidyverse.org/dev/reference/clipboard.md)
@@ -102,7 +100,7 @@ datasource(readr_example("mtcars.csv"))
 #> [1] "source_file" "source"     
 datasource(readr_example("mtcars.csv.bz2"))
 #> [[1]]
-#> [1] "/tmp/RtmpiUwc4C/file19fb6002b16a"
+#> [1] "/tmp/Rtmp09Pt0v/file19b3cb92ef5"
 #> 
 #> $skip
 #> [1] 0
@@ -117,13 +115,13 @@ datasource(readr_example("mtcars.csv.bz2"))
 #> [1] TRUE
 #> 
 #> $env
-#> <environment: 0x559ef2734ef0>
+#> <environment: 0x563d1fd3ec88>
 #> 
 #> attr(,"class")
 #> [1] "source_file" "source"     
 datasource(readr_example("mtcars.csv.zip"))
 #> [[1]]
-#> [1] "/tmp/RtmpiUwc4C/file19fb1cd88b5c"
+#> [1] "/tmp/Rtmp09Pt0v/file19b36a8308d8"
 #> 
 #> $skip
 #> [1] 0
@@ -138,7 +136,7 @@ datasource(readr_example("mtcars.csv.zip"))
 #> [1] TRUE
 #> 
 #> $env
-#> <environment: 0x559ef27a7c30>
+#> <environment: 0x563d1fdb1a00>
 #> 
 #> attr(,"class")
 #> [1] "source_file" "source"     
@@ -150,7 +148,7 @@ datasource("https://github.com/tidyverse/readr/raw/main/inst/extdata/mtcars.csv"
 con <- rawConnection(charToRaw("abc\n123"))
 datasource(con)
 #> [[1]]
-#> [1] "/tmp/RtmpiUwc4C/file19fb44b0ed38"
+#> [1] "/tmp/Rtmp09Pt0v/file19b34ee1ee"
 #> 
 #> $skip
 #> [1] 0
@@ -165,7 +163,7 @@ datasource(con)
 #> [1] TRUE
 #> 
 #> $env
-#> <environment: 0x559ef2845470>
+#> <environment: 0x563d1fe4f208>
 #> 
 #> attr(,"class")
 #> [1] "source_file" "source"     
